@@ -1,0 +1,393 @@
+body {
+  background: #000001;
+}
+
+a {
+  text-decoration: none;
+  color: #443f3f;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+.video-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.video-controls button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.social { 
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 300px;
+}
+
+.envelope {
+  color: white;
+  background-color: black; 
+  font-size: 50px;
+}
+
+
+.myPage {
+  position:absolute;
+  top:0px;
+  width:100vw;
+}
+
+/*img, .col2 > video, .smallvid > video {
+  border: 7px;
+  border-color: #ffa03ead;
+  border-style: solid;
+}
+*/
+
+.myModal > img {
+  border:0;
+}
+
+.title >h2 {
+  transform: rotate( 
+90deg);
+  font-size: 300px;
+  
+  padding: 0;
+  top: 0;
+  margin: 0;
+  color: #9d9b9b;
+  transform-origin: 0 0;
+}
+
+.content--intro .content__inner {
+  background: black;
+}
+
+h1,h2,p {
+  color:#443f3f;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden; 
+    overflow-y: scroll;
+  }
+
+h1,h2,h3,h4,ul,li,.topnav,label,input[type=submit]{
+    font-family: 'Oswald';
+    text-transform: uppercase;
+}
+
+h2 {
+    padding-left: 20px;
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+body, p {
+    font-family: 'Source Sans Pro';
+}
+
+.mainvid {
+  height: 100vh;
+  position: relative;
+}
+
+video#headvid {
+  object-fit: cover;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  z-index: -1;
+}
+
+.title2 {
+  padding-top:50px;
+}
+
+.mainpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.bigvid {
+  width: 30vw;
+  object-fit: cover;
+  height: 15vw;
+}
+
+/* .latest {
+  background-color: #f5e6e6;
+} */
+
+/* .contact, .film, .gallery {
+    background-color: #000001;
+} */
+
+.bio, .contact {
+  height: 100%;
+}
+
+/* .bio {
+    background-color: #000001 ;
+}
+
+.home {
+    background-color: #000001 ;
+} */
+
+i.fa.fa-bars {
+    color: white;
+    font-size: 34px;
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  /* padding-top: 47px; */
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    padding-top: 57px;
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  position: fixed;
+  background: #333;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+  .mycontent {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top:50px;
+    padding-bottom: 50px;
+    padding:20px;
+}
+
+.triplecol, .doublecol {
+    display: flex;
+}
+
+.col2 {
+  width: 50%;
+  padding:20px;
+}
+
+.col {
+    width: 33.33333%;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  .triplecol, .doublecol {
+    display: block;
+}
+
+.bigvid {
+  width: 100vw;
+  object-fit: cover;
+  height: 60vw;
+}
+
+  .col, .col2 {
+    width: 100%;
+    padding: 0px;
+}
+
+body {
+  overflow-y: visible;
+}
+
+.mainpic {
+  width: 100%;
+}
+
+div#films {
+  padding: 0;
+}
+
+img#myImg {
+  height: auto !important;
+  width: 100vw !important;
+}
+
+}
+
+/* @media only screen and (orientation: landscape) {
+  .portrait {
+    display:none;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  video#headvid {
+    display:none;
+  }
+  
+.portrait {
+  padding: 33vh 0;
+  text-align: center;
+}
+} */
+
+
+
+video#svid1, video#svid2, video#svid3 {
+    max-width: 100%;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+input[type=text], select, textarea, input#email {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button#my-form-button {
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  border: 1px solid grey;
+}
+
+button#my-form-button:hover {
+  background-color: rgb(121, 121, 121);
+}
+
+
+input[type=submit]:hover {
+  background-color: rgb(121, 121, 121);
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.myModal {
+  position:sticky;
+  top:0vh;
+  visibility:hidden;
+  opacity:0;
+  transition: opacity 0.5s;
+  background-color: #000000b3;
+  height:0vh;
+}
+
+img#myImg {
+  padding-top: 20vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: auto;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 20vh;
+  left: 50vw;
+  font-size: 35px;
+  font-weight: bold;
+  mix-blend-mode: difference;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}

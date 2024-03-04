@@ -1,0 +1,85 @@
+<head>
+    <title>CONTACT</title>
+
+</head>
+
+<body>
+    <div data-barba="wrapper">
+        <div data-barba="container" data-barba-namespace="contact">
+            <div class="myPage" id="contact">
+                <div class="contact">
+                    <div class="mycontent">
+                        <div class="title">
+                            <h2>CONTACT</h2>
+                        </div>
+                        <div class="mainpic">
+                            <img src="src/img/contact.webp" width="500" height="333">
+                        </div>
+                        <!-- <div class="social">
+                            <a href='https://www.instagram.com/iamsophiemacc/' alt='instagram' target='_blank'><img src="src/img/insta.png" width="100" height="100"></a>
+                            <a href='https://www.linkedin.com/in/sophie-maccorquodale-53821251/' alt='linkedin' target='_blank'><img src="src/img/linked.png" width="100" height="100"></a>
+                        </div> -->
+                        <!-- <form id="my-form" action="https://formspree.io/f/mzbngnvq" method="POST">
+                        
+                            <label for="Email">Email</label>
+                            <input type="email" id="email" name="email" >                      
+                        
+                            <label for="Message">Subject</label>
+                            <textarea type="text" id="message" name="message"></textarea>
+                        
+                            <button id="my-form-button">Submit</button>
+                            <p id="my-form-status"></p>
+
+
+                        
+                          </form> -->
+                          <p>
+                              <a href='https://www.instagram.com/iamsophiemacc/' alt='instagram' target='_blank'>
+                                Instagram
+                              </a>
+                          </p>
+                          <p>
+                              <a href='https://www.linkedin.com/in/sophie-maccorquodale-53821251/' alt='linkedin' target='_blank'>
+                                LinkedIn
+                              </a>
+                          </p>
+                          <p>
+                            <a href='mailto:sophiemacc@gmail' alt='Email' target='_blank'>
+                                sophiemacc@gmail
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var loadtest = getComputedStyle(document.body).getPropertyValue('background-color');
+    console.log(loadtest);
+    if (loadtest = "rgba(0, 0, 0, 0)") {
+      window.location.replace("index.html");
+    }
+
+var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your message!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+          </script>
+</body>
+                    
