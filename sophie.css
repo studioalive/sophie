@@ -2,13 +2,13 @@ body {
   background: #000001;
 }
 
-a {
+.contact a {
   text-decoration: none;
   color: #443f3f;
   text-transform: uppercase;
 }
 
-a:hover {
+.contact a:hover {
   background-color: white;
   color: black;
 }
