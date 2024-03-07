@@ -4,7 +4,7 @@ body {
 
 .socials {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   color: white;
   padding: 10px;
 }
