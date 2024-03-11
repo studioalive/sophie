@@ -112,6 +112,7 @@ body {
   cursor: pointer;
   font-size: 20px;
   padding: 0;
+  width: 20px;
 }
 
 .social { 
