@@ -2,14 +2,87 @@ body {
   background: #000001;
 }
 
-.socials {
-  position: absolute;
-  bottom: 50px;
-  color: white;
-  padding: 10px;
-}
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
 
-a {
+.hamburger:hover {
+  opacity: 1; }
+
+.hamburger-box {
+  width: 20px;
+  height: 8px;
+  display: inline-block;
+  position: relative;
+  background-color: transparent; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -3px; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  background-color: #FFF;
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; }
+
+.hamburger-inner::before {
+  top: -7px; }
+
+.hamburger-inner::after {
+  bottom: -7px; }
+
+/*
+   * Squeeze
+   */
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.hamburger--squeeze.is-active .hamburger-inner {
+  background-color: #FFF;
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  background-color: #FFF;
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  background-color: #FFF;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+#myLinks a {
   text-decoration: none;
   color: white;
   font-family: 'Oswald';
@@ -17,15 +90,20 @@ a {
   font-size: 17px;
 }
 
-a:hover {
+#myLinks a:hover {
   background-color: white;
   color: black;
 }
 
 .video-controls {
+  z-index: 2;
   position: absolute;
   top: 10px;
   left: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .video-controls button {
   background: none;
@@ -33,7 +111,7 @@ a:hover {
   color: white;
   cursor: pointer;
   font-size: 20px;
-  margin-right: 10px;
+  padding: 0;
 }
 
 .social { 
@@ -166,9 +244,7 @@ img {
     background-color: #000001;
 } */
 
-.bio, .contact {
-  height: 100%;
-}
+
 
 /* .bio {
     background-color: #000001 ;
@@ -178,23 +254,15 @@ img {
     background-color: #000001 ;
 } */
 
-i.fa.fa-bars {
-    color: white;
-    font-size: 34px;
-}
 
-i.fa.fa-bars:hover {
-  color: black;
-  background-color: white;
-}
 
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;  
   position: fixed;
-  z-index: 999;
+  z-index: 1;
   top: 0;
-  right: 0;
+  left: 0;
   /* padding-top: 47px; */
 }
 
@@ -214,17 +282,20 @@ i.fa.fa-bars:hover {
 /* Style the hamburger menu */
 .topnav a.icon {
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
-/* Add a grey background color on mouse-over */
-/* .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-} */
+#myLinks {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  display: none; /* hide it by default */
+}
 
-/* Style the active link (or home/logo) */
+#myLinks.show {
+  opacity: 1;
+  display: block; /* show it when class 'show' is added */
+}
 .active {
   background-color: #04AA6D;
   color: white;
