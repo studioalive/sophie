@@ -97,7 +97,7 @@ body {
 
 .video-controls {
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: 10px;
   width: 100px;
@@ -116,11 +116,18 @@ body {
 }
 
 .social { 
+  max-width: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 30px;
-  gap: 300px;
+  margin: 0 auto;
 }
+
+.social img {
+  height: 50px;
+  width: 50px;
+}
+
 
 .envelope {
   color: white;
@@ -150,7 +157,7 @@ body {
   transform: rotate( 
 90deg);
   font-size: 300px;
-  
+  overflow: hidden;
   padding: 0;
   top: 0;
   margin: 0;
@@ -290,7 +297,10 @@ img {
 #myLinks {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  display: none; /* hide it by default */
+  display: none;
+  padding-bottom: 6px;
+  width: 123px;
+  background-color: #666666;
 }
 
 #myLinks.show {
@@ -386,7 +396,6 @@ form {
   max-width: 500px;
   margin: auto;
   padding-top: 30px;
-  padding-bottom: 80px;
 }
 
 input[type=text], select, textarea, input#email {

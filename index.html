@@ -30,9 +30,10 @@
 
       <a href="index.html" id="home">Home</a>
       <a href="bio.html" id="bio">About</a>
-      <a href='https://www.instagram.com/iamsophiemacc/' target="_blank">Instagram</a>
+      <a href="contact.html" id="contact">Contact</a>
+      <!-- <a href='https://www.instagram.com/iamsophiemacc/' target="_blank">Instagram</a>
       <a href='https://www.linkedin.com/in/sophie-maccorquodale-53821251/' target="_blank">LinkedIn</a>
-      <a href='mailto:sophiemacc@gmail'>sophiemacc@gmail</a>
+      <a href='mailto:sophiemacc@gmail'>sophiemacc@gmail</a> -->
 
     </div>
 
@@ -88,6 +89,8 @@
       var muteBtn = document.getElementById("muteBtn");
       var homeLink = document.getElementById("home");
       var bioLink = document.getElementById("bio");
+      var contactLink = document.getElementById("contact");
+      var myLinks = document.getElementById("myLinks");
 
       // Check if the current page is the homepage
       if (data.next.namespace === 'homepage') {
@@ -96,7 +99,7 @@
         // Show the buttons on the homepage
         playPauseBtn.style.visibility = "visible";
         muteBtn.style.visibility = "visible";
-
+        myLinks.style.opacity = "0.5";
         playPauseBtn.onclick = function () {
           if (myVideo.paused) {
             myVideo.play();
@@ -124,7 +127,7 @@
         // Hide the buttons on other pages
         playPauseBtn.style.visibility = "hidden";
         muteBtn.style.visibility = "hidden";
-
+        myLinks.style.opacity = "1";
         // Enable the home link
         homeLink.style.pointerEvents = "auto";
         homeLink.style.opacity = "1"; // Optional: make it look enabled
@@ -133,14 +136,29 @@
       // Check if the current page is the about page
       if (data.next.namespace === 'bio') {
         // Disable the bio link
+        
         bioLink.style.pointerEvents = "none";
         bioLink.style.opacity = "0.5"; // Optional: make it look disabled
       } else {
         // Enable the bio link
         bioLink.style.pointerEvents = "auto";
-        bioLink.style.opacity = "1"; // Optional: make it look enabled
+        bioLink.style.opacity = "1"; 
+        
+      }
+
+            // Check if the current page is the about page
+            if (data.next.namespace === 'contact') {
+        // Disable the bio link
+        contactLink.style.pointerEvents = "none";
+        contactLink.style.opacity = "0.5"; // Optional: make it look disabled
+      } else {
+        // Enable the bio link
+        contactLink.style.pointerEvents = "auto";
+        contactLink.style.opacity = "1"; // Optional: make it look enabled
       }
     });
+
+    
 
 
 
